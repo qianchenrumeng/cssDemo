@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        body,
+        p {
+            margin: 0;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        div {
+            position: relative;
+            width: 50px;
+            height: 150px;
+            margin: 100px auto;
+            animation: change 1s infinite alternate;
+        }
+
+        div p {
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 120px;
+            background-color: #f00;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(60deg);
+            animation: changeshadow 1s infinite alternate;
+        }
+
+        div .right {
+            left: -54px;
+            transform: rotate(-60deg);
+        }
+
+        @keyframes change {
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes changeshadow {
+            from {
+                box-shadow: 0 0 10px red;
+            }
+
+            to {
+                box-shadow: 0 0 180px red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p class="left">
+        </p>
+        <p class="right">
+        </p>
+    </div>
+
+
+    <script></script>
+</body>
+
+</html>
