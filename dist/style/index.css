@@ -1,0 +1,64 @@
+div{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: absolute;
+   
+}
+.div1{
+  margin-top: 100px;
+  transform:perspective(500px);
+  transform-style:preserve-3d;
+  position: relative; 
+  transform:rotateX(-30deg) rotateY(30deg);
+  animation:myfirst 10s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+
+  
+  
+}
+.div1 .top{
+  background-color: #ff0000;
+  transform:rotatex(90deg) translateZ(100px);
+  opacity: 0.5;
+}
+.div1 .buttom{
+  background-color: #ff00ff;
+  transform:rotatex(90deg) translateZ(-100px);
+  opacity: 0.5;
+}
+.div1 .left{
+  background-color: yellowgreen;
+  transform: rotateY(-90deg) translateZ(100px);
+  opacity: 0.5;
+
+}
+.div1 .right{
+  background-color: green;
+  transform: rotateY(90deg) translateZ(100px);
+  opacity: 0.5;
+
+}
+.div1 .front{
+  color:green;
+  background-color: blue;
+  transform: translateZ(100px);
+  opacity: 0.5;
+
+}
+.div1 .rear{
+  background-color: green;
+  transform: translateZ(-100px);
+  opacity: 0.5;
+
+} 
+/* @keyframes myfirst
+{
+0% {transform:rotateX(-30deg) rotateY(30deg);}
+100% {transform:rotateX(360deg) rotateY(360deg);}
+}
+  */
+
+
+

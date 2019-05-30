@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            top: 100px;
+            left: 100px;
+            transform: perspective(200px);
+            transform-style: preserve-3d;
+            animation: myfirst 10s;
+            /* 循环 */
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .father div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+
+            opacity: 0.5;
+        }
+
+        .father div:nth-child(1) {
+            transform: rotateX(90deg) translateZ(100px);
+            background: pink;
+        }
+
+        .father div:nth-child(2) {
+            transform: rotateX(90deg) translateZ(-100px);
+            background: rgb(230, 120, 138);
+        }
+
+        .father div:nth-child(3) {
+            transform: rotateY(90deg) translateZ(-100px);
+            background: rgb(117, 40, 53);
+        }
+
+        .father div:nth-child(4) {
+            transform: rotateY(90deg) translateZ(100px);
+            background: rgb(231, 92, 115);
+        }
+
+        .father div:nth-child(5) {
+            transform: translateZ(-100px);
+            background: rgb(235, 37, 70);
+        }
+
+        .father div:nth-child(6) {
+            transform: translateZ(100px);
+            background: rgb(218, 5, 40);
+        }
+
+        @keyframes myfirst {
+            0% {
+                transform: rotateX(-30deg) rotateY(30deg);
+            }
+
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+
+        .mather{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            top: 400px;
+            left: 400px;
+            transform: perspective(200px);
+            transform-style: preserve-3d;
+            transform:  rotateX(-15deg) rotateY(60deg);
+            animation: myMother 20s;
+            /* 循环 */
+            animation-iteration-count: infinite;
+        }
+        .mather div{
+            position: absolute;
+            width: 100px;
+            height: 200px;
+
+            opacity: 0.5;
+        }
+        .mather div:nth-child(1) {
+            transform: rotateY(60deg) translateZ(100px);
+            background: pink;
+        }
+
+        .mather div:nth-child(2) {
+            transform: rotateY(60deg) translateZ(-100px);
+            background: rgb(230, 120, 138);
+        }
+
+        .mather div:nth-child(3) {
+            transform: rotateY(120deg) translateZ(-100px);
+            background: rgb(117, 40, 53);
+        }
+
+        .mather div:nth-child(4) {
+            transform: rotateY(120deg) translateZ(100px);
+            background: rgb(231, 92, 115);
+        }
+
+        .mather div:nth-child(5) {
+            transform: translateZ(-100px);
+            background: rgb(235, 37, 70);
+        }
+
+        .mather div:nth-child(6) {
+            transform: translateZ(100px);
+            background: rgb(218, 5, 40);
+        }
+        @keyframes myMother {
+            0% {
+                transform: rotateX(-15deg) rotateY(60deg);
+            }
+
+            100% {
+                transform:  rotateX(-15deg) rotateY(420deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 正方体 -->
+    <div class="father">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- 旋转相册 -->
+    <div class="mather">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+
+</body>
+
+</html>
