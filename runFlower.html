@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .flowerWrap{
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            transition: transform 5s;
+        }
+        .flowerWrap div{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgb(224, 69, 95);
+            background: rgba(219, 123, 139,.5);
+            float: left;
+        }
+        .flowerWrap div:nth-child(1){
+            border-radius:0 100%;
+        }
+        .flowerWrap div:nth-child(4){
+            border-radius:0 100%;
+        }
+        .flowerWrap div:nth-child(2){
+            border-radius: 100% 0;
+        }
+        .flowerWrap div:nth-child(3){
+            border-radius: 100% 0;
+        }
+        .flowerWrap:hover{
+            transform: rotate(3600deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="flowerWrap">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
